@@ -137,6 +137,7 @@ img.general__avatar {
 .content-item_code {
   width: 100%;
   flex-grow: 1;
+  overflow: hidden;
 }
 .content-item_border-no {
   border: none;
