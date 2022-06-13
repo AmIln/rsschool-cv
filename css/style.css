@@ -25,13 +25,19 @@ dl,
 dd {
   margin: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  height: 100%;
+}
 
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 ul[class],
@@ -81,17 +87,25 @@ li.menu__item>a.menu__link {
   color: white;
   font-size: 20px;
 }
+li.menu__item>a.menu__link:hover {
+  color: yellowgreen;
+  text-shadow: 2px 2px 8px black;
+}
 .main {
   margin: 0 100px 0 100px;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*grid-template-columns: 50% 50%;*/
+  flex: 1 0 auto;
+  flex-wrap: wrap;
 }
 .general {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  flex-grow: 1;
+  width: 100%;
   margin-bottom: 40px;
   border-bottom: 5px solid rgb(2, 100, 19);
 }
@@ -111,8 +125,10 @@ img.general__avatar {
 .description__profession {
   font-style: italic;
 }
+
 .content-item {
   border-bottom: 2px solid rgb(2, 100, 19);
+  /*width: 50%;*/
 }
 
 .content-item_text-center {
@@ -122,10 +138,8 @@ img.general__avatar {
   align-items: center;
 }
 .content-item_code {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  width: 100%;
+  flex-grow: 1;
 }
 .content-item_border-no {
   border: none;
@@ -136,10 +150,14 @@ li.list__item {
 li.list__item>a {
   color: rgb(2, 100, 19);
 }
+li.list__item>a:hover {
+  color: yellowgreen;
+}
 footer {
   height: 100px;
   background-color: rgb(2, 100, 19);
   display: flex;
+  flex: 0 0 auto;
   flex-direction: row;
   align-items: center;
   justify-content: left;
@@ -150,12 +168,28 @@ footer {
 a.footer__link {
   color: white;
 }
+a.footer__link:hover {
+  color: yellowgreen;
+  text-shadow: 2px 2px 8px black;
+}
 a.footer__logo {
   margin: 0 100px 0 auto;
   height: 50px;
   width: 100px;
 }
+a.footer__logo:hover {
+  border-radius: 5%;
+  background-color: yellowgreen;
+  box-shadow: 3px 3px 3px black, -3px -3px 3px black;
+}
 a.footer__logo>img {
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 }
