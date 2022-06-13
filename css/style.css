@@ -95,8 +95,6 @@ li.menu__item>a.menu__link:hover {
   margin: 0 100px 0 100px;
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
-  /*grid-template-columns: 50% 50%;*/
   flex: 1 0 auto;
   flex-wrap: wrap;
 }
@@ -128,7 +126,6 @@ img.general__avatar {
 
 .content-item {
   border-bottom: 2px solid rgb(2, 100, 19);
-  /*width: 50%;*/
 }
 
 .content-item_text-center {
@@ -185,11 +182,4 @@ a.footer__logo:hover {
 a.footer__logo>img {
   height: 100%;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
 }
