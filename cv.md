@@ -42,6 +42,6 @@ I am 27 years old, I live in Moscow. I want to learn programming and work in thi
 ## Work experience
 * [CV#1. Markdown Git](https://github.com/AmIln/rsschool-cv)
 ## Education
-* 2022 - The Rolling Scopes JS/Front-end stage 0
+* 2022 - The Rolling Scopes JS/Front-end stage 0 (received a certificate)
 ## Language
 * English B1
