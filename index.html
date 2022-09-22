@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV#2. HTML, CSS Git Basics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#aboutMe" class="menu__link">About me</a></li>
+                <li class="menu__item"><a href="#links" class="menu__link">Links</a></li>
+                <li class="menu__item"><a href="#skills" class="menu__link">Skills</a></li>
+                <li class="menu__item"><a href="#codeExample" class="menu__link">Code example</a></li>
+                <li class="menu__item"><a href="#workExperience" class="menu__link">Work experience</a></li>
+                <li class="menu__item"><a href="#education" class="menu__link">Education</a></li>
+                <li class="menu__item"><a href="#language" class="menu__link">Language</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="general" id="profile">
+            <img src="assets/img/avatar.png" alt="avatar" class="general__avatar">
+            <div class="description">
+                <div class="description__name">Dmitry Andriyanov</div>
+                <h1 class="description__profession">Junion Front-end Developer</h1>
+            </div>
+        </section>
+        <section class="content-item content-item_text-center" id="aboutMe">
+            <h2 class="content-item__caption">About me</h2>
+            <p class="content-item__text">I am 27 years old, I live in Moscow. I want to learn programming and work in this field. I think this kind of work is very interesting.</p>
+        </section>
+        <section class="content-item content-item_text-center" id="links">
+            <h2 class="content-item__caption">Links</h2>
+            <ul class="list">
+                <li class="list__item list__item_email">Email: facklak@mail.ru</li>
+                <li class="list__item list__item_github">Github: <a href="https://github.com/AmIln" class="link">AmIln</a></li>
+                <li class="list__item list__item_discord">Discord: Amin#9451</li>
+            </ul>
+        </section>
+        <section class="content-item content-item_text-center" id="skills">
+            <h2 class="content-item__caption">Skills</h2>
+            <ul class="list">
+                <li class="list__item">HTML</li>
+                <li class="list__item">CSS(sass,scss)</li>
+                <li class="list__item">JavaScript</li>
+                <li class="list__item">GULP</li>
+                <li class="list__item">Photoshop</li>
+                <li class="list__item">Figma</li>
+            </ul>
+        </section>
+        <section class="content-item content-item_code content-item_text-center" id="codeExample">
+            <h2 class="content-item__caption">Code example</h2>
+            <h3 class="content-item__code">This code from codewars "Roman Numerals Decoder"</h3>
+            <pre><code>
+                function solution (roman) {
+                    let romanNumber = [['I',1],['V',5],['X',10],['L',50],['C',100],['D',500],['M',1000]],
+                        total = 0;
+                    function returnValue(simbol) {
+                      for (let i=0;i&lt;=romanNumber.length-1;i++) {
+                        if (simbol === romanNumber[i][0]) {
+                          return romanNumber[i][1]
+                        }
+                      }
+                    }
+                    for (let i=0;i&lt;=roman.length-1;i++) {
+                      if (roman[i+1] != undefined) {
+                        if (returnValue(roman[i])&lt;returnValue(roman[i+1])) {
+                          total+= returnValue(roman[i+1]) - returnValue(roman[i]);
+                          i++
+                        } else {
+                          total+= returnValue(roman[i]);
+                        }
+                      } else {
+                        total+= returnValue(roman[i]);
+                      }
+                    }
+                    return total
+                }
+            </code></pre>
+        </section>
+        <section class="content-item content-item_text-center" id="workExperience">
+            <h2 class="content-item__caption">Work experience</h2>
+            <ul class="list">
+                <li class="list__item"><a href="https://github.com/AmIln/rsschool-cv">CV#1. Markdown Git</a></li>
+            </ul>
+        </section>
+        <section class="content-item content-item_text-center" id="education">
+            <h2 class="content-item__caption">Education</h2>
+            <ul class="list">
+                <li class="list__item">2022 - The Rolling Scopes JS/Front-end stage 0 (received a certificate)</li>
+            </ul>
+        </section>
+        <section class="content-item content-item_text-center content-item_border-no" id="language">
+            <h2 class="content-item__caption">Language</h2>
+            <ul class="list">
+                <li class="list__item">English - B1</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__year">&copy;2022</div>
+        <a href="https://github.com/AmIln" class="footer__link">AmIln</a>
+        <a href="https://rs.school/js/" class="footer__logo"><img src="assets/svg/rs_school.svg" alt="logo"></a>
+    </footer>
+</body>
+</html>
